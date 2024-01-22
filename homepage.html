@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Spotify Clone</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,389 +19,277 @@
   <body>
     <header>
       <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="row">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-black">
             <div
               class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
             >
-              <a
-                href="/"
-                class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-              >
-                <span class="fs-5 d-none d-sm-inline">Home</span>
-              </a>
+              <a href="#" class="mb-3"
+                ><i class="bi bi-three-dots text-white"></i
+              ></a>
               <ul
                 class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                 id="menu"
               >
+                <li class="nav-item mb-2">
+                  <i class="bi bi-house-door text-secondary"></i>
+                  <a href="#" class="text-decoration-none"
+                    ><span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Home</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <i class="bi bi-search text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Cerca</span
+                    ></a
+                  >
+                </li>
+
+                <li class="nav-item mb-5">
+                  <i class="bi bi-bookmarks text-secondary"></i>
+                  <a href="#" class="text-decoration-none"
+                    ><span class="ms-1 d-none d-sm-inline text-secondary"
+                      >La tua libreria</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <i class="bi bi-play-circle text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Crea playlist</span
+                    ></a
+                  >
+                </li>
+
+                <li class="nav-item mb-2">
+                  <i class="bi bi-suit-heart text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Brani che ti piacciono</span
+                    ></a
+                  >
+                </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link align-middle px-0">
-                    <i class="fs-4 bi-house"></i>
-                    <span class="ms-1 d-none d-sm-inline">Cerca</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#submenu1"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle"
+                  <i class="bi bi-bookmark text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >I tuoi episodi</span
+                    ></a
                   >
-                    <i class="fs-4 bi-speedometer2"></i>
-                    <span class="ms-1 d-none d-sm-inline">La tua libreria</span>
-                  </a>
-                  <ul
-                    class="collapse show nav flex-column ms-1"
-                    id="submenu1"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Item</span> 1
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Item</span> 2
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-table"></i>
-                    <span class="ms-1 d-none d-sm-inline">Orders</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#submenu2"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle"
-                  >
-                    <i class="fs-4 bi-bootstrap"></i>
-                    <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a
-                  >
-                  <ul
-                    class="collapse nav flex-column ms-1"
-                    id="submenu2"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Item</span> 1</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Item</span> 2</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a
-                    href="#submenu3"
-                    data-bs-toggle="collapse"
-                    class="nav-link px-0 align-middle"
-                  >
-                    <i class="fs-4 bi-grid"></i>
-                    <span class="ms-1 d-none d-sm-inline">Products</span>
-                  </a>
-                  <ul
-                    class="collapse nav flex-column ms-1"
-                    id="submenu3"
-                    data-bs-parent="#menu"
-                  >
-                    <li class="w-100">
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Product</span> 1</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Product</span> 2</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Product</span> 3</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="nav-link px-0">
-                        <span class="d-none d-sm-inline">Product</span> 4</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                    <i class="fs-4 bi-people"></i>
-                    <span class="ms-1 d-none d-sm-inline">Customers</span>
-                  </a>
+                  <hr class="bg-secondary" />
                 </li>
               </ul>
-              <hr />
-              <div class="dropdown pb-4">
-                <a
-                  href="#"
-                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                  id="dropdownUser1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="col py-3" id="homepage-central">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-3">
+              <span
+                ><i class="bi bi-arrow-left-circle fs-5 text-white"></i
+              ></span>
+              <span
+                ><i class="bi bi-arrow-right-circle fs-5 text-white"></i
+              ></span>
+            </div>
+            <div class="col-2" id="profilo">
+              <ul
+                id="homepage"
+                style="list-style-type: none"
+                class="bg-black rounded-pill p-1"
+              >
+                <li class="text-white">
                   <img
-                    src="https://github.com/mdo.png"
-                    alt="hugenerd"
-                    width="30"
-                    height="30"
-                    class="rounded-circle"
+                    src="https://cdn-p.smehost.net/sites/239008154bb641859bcbbc74541773c3/wp-content/uploads/2022/11/Spotify_profile_tips_1200x800.jpg"
+                    alt=""
+                    style="border: 1px; width: 40px; border-radius: 50%"
                   />
-                  <span class="d-none d-sm-inline mx-1">loser</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                  <li><a class="dropdown-item" href="#">New project...</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
+                  <span>Profilo utente</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row text-white mt-5">
+            <div class="col-12">
+              <div class="row justify-content-between" id="hero">
+                <div class="col-3 px-0">
+                  <img
+                    src="./assets/imgs/main/image-1.jpg"
+                    alt="primoalbum"
+                    class="w-100"
+                  />
+                </div>
+                <div class="col-8 pb-3 pt-3 pb-md-2 pt-md-2">
+                  <p>ALBUM</p>
+                  <h1 class="display-2 fw-semibold">VIOLA (feat.SALMO)</h1>
+                  <p>Fedez,Salmo</p>
+                  <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                  <button type="button" class="btn btn-success rounded-pill">
+                    Play
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light rounded-pill"
+                  >
+                    Salva
+                  </button>
+                  <button type="button" class="btn btn-outline-light border-0">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col py-3" id="homepage-central">
-            <div class="container">
-              <div class="row justify-content-between">
-                <div class="col-3">
-                  <span
-                    ><i class="bi bi-arrow-left-circle fs-5 text-white"></i
-                  ></span>
-                  <span
-                    ><i class="bi bi-arrow-right-circle fs-5 text-white"></i
-                  ></span>
-                </div>
-                <div class="col-2" id="profilo">
-                  <ul
-                    id="homepage"
-                    style="list-style-type: none"
-                    class="bg-black rounded-pill p-1"
-                  >
-                    <li class="text-white">
-                      <img
-                        src="https://cdn-p.smehost.net/sites/239008154bb641859bcbbc74541773c3/wp-content/uploads/2022/11/Spotify_profile_tips_1200x800.jpg"
-                        alt=""
-                        style="border: 1px; width: 40px; border-radius: 50%"
-                      />
-                      <span>Profilo utente</span>
-                    </li>
-                  </ul>
+          <h3 class="text-white mt-3">Buonasera</h3>
+          <div class="row mt-3">
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-2.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold"
+                  >La tua estate è un film</span
+                >
+              </li>
+            </div>
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-3.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold"
+                  >Massima concentrazione</span
+                >
+              </li>
+            </div>
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold">Soft Piano</span>
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-5.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold">Soft Beats</span>
+              </li>
+            </div>
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-6.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold">Jazz Vibes</span>
+              </li>
+            </div>
+            <div class="col-4 buonasera">
+              <li class="list-group-item">
+                <img
+                  src="./assets/imgs/main/image-7.jpg"
+                  alt="copertina"
+                  style="width: 65px"
+                />
+                <span class="p-1 text-white fw-semibold"
+                  >Caffè del Buongiorno</span
+                >
+              </li>
+            </div>
+          </div>
+          <h3 class="text-white mt-3">Altro di ciò che ti piace</h3>
+          <div class="row mt-3 g-3 justify-content-between">
+            <div class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0">
+              <div class="card border-0">
+                <img
+                  src="./assets/imgs/main/image-8.jpg"
+                  class="card-img-top"
+                  alt="copertina"
+                />
+                <div class="card-body bg-dark p-1">
+                  <p class="card-text fw-semibold text-white">Titolo Canzone</p>
+                  <p class="text-white">Descrizione</p>
                 </div>
               </div>
-              <div class="row text-white mt-5">
-                <div class="col-12">
-                  <div class="row justify-content-between" id="hero">
-                    <div class="col-3 px-0">
-                      <img
-                        src="./assets/imgs/main/image-1.jpg"
-                        alt="primoalbum"
-                        class="w-100"
-                      />
-                    </div>
-                    <div class="col-8 pb-3 pt-3 pb-md-2 pt-md-2">
-                      <p>ALBUM</p>
-                      <h1 class="display-2 fw-semibold">VIOLA (feat.SALMO)</h1>
-                      <p>Fedez,Salmo</p>
-                      <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
-                      <button
-                        type="button"
-                        class="btn btn-success rounded-pill"
-                      >
-                        Play
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-light rounded-pill"
-                      >
-                        Salva
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-light border-0"
-                      >
-                        <i class="bi bi-three-dots"></i>
-                      </button>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0">
+              <div class="card border-0">
+                <img
+                  src="./assets/imgs/main/image-8.jpg"
+                  class="card-img-top"
+                  alt="copertina"
+                />
+                <div class="card-body bg-dark p-1">
+                  <p class="card-text fw-semibold text-white">Titolo Canzone</p>
+                  <p class="text-white">Descrizione</p>
                 </div>
               </div>
-              <h3 class="text-white mt-3">Buonasera</h3>
-              <div class="row mt-3">
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-2.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold"
-                      >La tua estate è un film</span
-                    >
-                  </li>
-                </div>
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-3.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold"
-                      >Massima concentrazione</span
-                    >
-                  </li>
-                </div>
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-4.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold">Soft Piano</span>
-                  </li>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0">
+              <div class="card border-0">
+                <img
+                  src="./assets/imgs/main/image-8.jpg"
+                  class="card-img-top"
+                  alt="copertina"
+                />
+                <div class="card-body bg-dark p-1">
+                  <p class="card-text fw-semibold text-white">Titolo Canzone</p>
+                  <p class="text-white">Descrizione</p>
                 </div>
               </div>
-              <div class="row mt-3">
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-5.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold">Soft Beats</span>
-                  </li>
-                </div>
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-6.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold">Jazz Vibes</span>
-                  </li>
-                </div>
-                <div class="col-4 buonasera">
-                  <li class="list-group-item">
-                    <img
-                      src="./assets/imgs/main/image-7.jpg"
-                      alt="copertina"
-                      style="width: 65px"
-                    />
-                    <span class="p-1 text-white fw-semibold"
-                      >Caffè del Buongiorno</span
-                    >
-                  </li>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0">
+              <div class="card border-0">
+                <img
+                  src="./assets/imgs/main/image-8.jpg"
+                  class="card-img-top"
+                  alt="copertina"
+                />
+                <div class="card-body bg-dark p-1">
+                  <p class="card-text fw-semibold text-white">Titolo Canzone</p>
+                  <p class="text-white">Descrizione</p>
                 </div>
               </div>
-              <h3 class="text-white mt-3">Altro di ciò che ti piace</h3>
-              <div class="row mt-3 g-3 justify-content-between">
-                <div
-                  class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0"
-                >
-                  <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="card-img-top"
-                      alt="copertina"
-                    />
-                    <div class="card-body bg-dark p-1">
-                      <p class="card-text fw-semibold text-white">
-                        Titolo Canzone
-                      </p>
-                      <p class="text-white">Descrizione</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0"
-                >
-                  <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="card-img-top"
-                      alt="copertina"
-                    />
-                    <div class="card-body bg-dark p-1">
-                      <p class="card-text fw-semibold text-white">
-                        Titolo Canzone
-                      </p>
-                      <p class="text-white">Descrizione</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0"
-                >
-                  <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="card-img-top"
-                      alt="copertina"
-                    />
-                    <div class="card-body bg-dark p-1">
-                      <p class="card-text fw-semibold text-white">
-                        Titolo Canzone
-                      </p>
-                      <p class="text-white">Descrizione</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0"
-                >
-                  <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="card-img-top"
-                      alt="copertina"
-                    />
-                    <div class="card-body bg-dark p-1">
-                      <p class="card-text fw-semibold text-white">
-                        Titolo Canzone
-                      </p>
-                      <p class="text-white">Descrizione</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0"
-                >
-                  <div class="card border-0">
-                    <img
-                      src="./assets/imgs/main/image-8.jpg"
-                      class="card-img-top"
-                      alt="copertina"
-                    />
-                    <div class="card-body bg-dark p-1">
-                      <p class="card-text fw-semibold text-white">
-                        Titolo Canzone
-                      </p>
-                      <p class="text-white">Descrizione</p>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0">
+              <div class="card border-0">
+                <img
+                  src="./assets/imgs/main/image-8.jpg"
+                  class="card-img-top"
+                  alt="copertina"
+                />
+                <div class="card-body bg-dark p-1">
+                  <p class="card-text fw-semibold text-white">Titolo Canzone</p>
+                  <p class="text-white">Descrizione</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <main></main>
-
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
