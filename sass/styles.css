@@ -11,6 +11,10 @@
   background-color: #636363;
 }
 
+#sfondo {
+  background-image: url(../assets/imgs/main/image-11.jpg);
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
