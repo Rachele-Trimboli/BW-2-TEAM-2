@@ -3,11 +3,11 @@
 
 // COLORS
 
-// $new-theme-colors: (
-//   // "color-name": #color
-//   "blue": lightblue
-// );
+$new-theme-colors: (
+  // "color-name": #color
+  'blackButton': #423918
+);
 
-// $theme-colors: map-merge($theme-colors, $new-theme-colors);
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
 
 @import '../bootstrap/scss/bootstrap';
