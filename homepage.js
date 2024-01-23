@@ -1,7 +1,7 @@
 const card = document.getElementsByClassName("card border-0");
 console.log(card);
 const addressBarContent = new URLSearchParams(location.search);
-const albumId = addressBarContent.get("albumId");
+const searchAlbumId = addressBarContent.get("albumId");
 
 const viewApiFunction = function () {
   fetch("  https://striveschool-api.herokuapp.com/api/deezer/search?q=pop", {
@@ -23,6 +23,7 @@ const viewApiFunction = function () {
       for (let i = 0; i < data.data.length; i++) {
         console.log(data.data[i].album);
         const album = data.data[i].album;
+        console.log(album.id);
 
         card[i].innerHTML = `
         <img
@@ -42,7 +43,7 @@ const viewApiFunction = function () {
         const button = document.getElementsByClassName("play");
 
         button[i].addEventListener("click", function () {
-          location.href = "./albumpage.html";
+          location.href = "./albumpage.html?albumId=" + album.id;
         });
       }
     })
