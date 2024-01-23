@@ -43,7 +43,7 @@ const viewApiFunction = function () {
         const button = document.getElementsByClassName("play");
 
         button[i].addEventListener("click", function () {
-          location.href = "./albumpage.html?albumId=" + album.id;
+          location.href = "./albumpage.html" + album.id;
         });
       }
     })
