@@ -20,6 +20,14 @@
   box-shadow: 1px 1px 20px 4px #000000;
 }
 
+.artist {
+  color: white;
+}
+.artist:hover {
+  cursor: pointer;
+  color: rgb(19, 180, 19);
+}
+
 .list-group {
   --bs-list-group-color: #f8f9fa;
   --bs-list-group-bg: #000;

@@ -36,14 +36,19 @@ const viewApiFunction = function () {
                     <p class="card-text fw-semibold text-white">
                       ${album.title}
                     </p>
-                    <p class="text-white">${data.data[i].title}</p>
+                    <p class="artist">${data.data[i].artist.name}</p>
                     <button type="button" class="btn btn-success rounded-circle text-black play"><i class="bi bi-play-circle-fill bg-success"></i></button>
                     </div>
         `;
         const button = document.getElementsByClassName("play");
+        const artist = document.getElementsByClassName("artist");
 
         button[i].addEventListener("click", function () {
           location.href = "./albumpage.html?albumId=" + album.id;
+        });
+        artist[i].addEventListener("click", function () {
+          location.href =
+            "./artistpage.html?artistId=" + data.data[i].artist.id;
         });
       }
     })

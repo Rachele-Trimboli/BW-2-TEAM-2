@@ -21,3 +21,10 @@
         box-shadow: 1px 1px 20px 4px #000000;
     }
 }
+.artist{
+    color: white;
+    &:hover{
+        cursor: pointer;
+        color: rgb(19, 180, 19);
+    }
+}
