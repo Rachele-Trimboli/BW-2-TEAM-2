@@ -498,17 +498,69 @@
     </header>
     <main></main>
     <footer>
+      <!----------- ROW E COL ESTERNE---------->
       <div class="container-fluid">
         <div
-          class="row bg-dark justify-content-between border-top border-secondary border-opacity-25"
+          class="row bg-dark border-top border-secondary border-opacity-25 fixed-bottom align-items-center justify-content-between"
         >
-          <div class="col">
-            <img src="" alt="" />
-            <p class="text-white fs-5 fs-4">Fat Fanny Friend</p>
-            <p class="text-secondary fs-6 fs-6">Maddie Zahm</p>
+          <div class="col-3 p-1">
+            <!-- --------------PRIMA  ROW  INTERNA (parte sinistra)------------>
+            <div class="row align-items-center p-3 justify-content-center">
+              <div class="col-3 d-flex justify-content-end">
+                <img
+                  src="./assets/imgs/search/image-1.jpeg"
+                  alt="image"
+                  class="w-100"
+                />
+              </div>
+              <div class="col-7">
+                <p class="text-white fs-6 mb-0 text-center">Fat Fanny Friend</p>
+                <p class="text-secondary fs-6 text-center">Maddie Zahm</p>
+              </div>
+              <div class="col-2">
+                <i class="bi bi-heart text-white"></i>
+              </div>
+            </div>
           </div>
-          <div class="col"></div>
-          <div class="col"></div>
+
+          <!------------SECONDA  ROW  INTERNA (parte centrale)--------- -->
+
+          <div class="col-3 p-1">
+            <div class="row justify-content-center align-items-center p-3">
+              <div class="col-12">
+                <a href="#">
+                  <i class="bi bi-shuffle text-white mx-2 fs-4"></i
+                ></a>
+                <a href="#">
+                  <i class="bi bi-skip-backward text-white mx-2 fs-4"></i
+                ></a>
+                <a href="#"
+                  ><i class="bi bi-play-circle-fill text-white fs-1 mx-2"></i
+                ></a>
+                <a href="#">
+                  <i class="bi bi-skip-forward text-white mx-2 fs-4"></i
+                ></a>
+                <a href="#">
+                  <i class="bi bi-download text-white mx-2 fs-4"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!--------------- TERZA COL ESTERNA (DESTRA) ------------------->
+
+          <div class="col-3 p-1">
+            <div class="row justify-content-end align-items-center p-3">
+              <div class="col-6">
+                <a href="#"><i class="bi bi-mic text-white fs-4"></i></a>
+                <a href="#"
+                  ><i class="bi bi-soundwave text-white fs-4 mx-2"></i
+                ></a>
+                <a href="#"
+                  ><i class="bi bi-journal-album text-white fs-4"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
