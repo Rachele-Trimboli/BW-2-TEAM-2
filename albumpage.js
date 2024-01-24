@@ -88,7 +88,7 @@ const getAlbum = (albumId) => {
       bandPhoto.src = data.artist.picture_small
       bandName.innerText = data.artist.name
       albumYear.innerText = data.release_date.slice(0, 4)
-      albumlength.innerText = data.nb_tracks
+      albumlength.innerText = data.nb_tracks + ' brani'
       albumDuration.innerText = secondsToMinutes(data.duration)
 
       console.log(data)
