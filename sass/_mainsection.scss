@@ -1,13 +1,14 @@
-#homepage-central{
-    background-color: #171717;
-     
+#homepage-central {
+  background-color: #171717;
 }
-#hero{
-    background: linear-gradient(49deg, #000, #adb5bd1f);
+#hero {
+  background: linear-gradient(49deg, #000, #adb5bd1f);
 }
-.buonasera{
-    li{
-        background-color: #2c2c2c;
-
-    }
+.buonasera {
+  li {
+    background-color: #2c2c2c;
+  }
+}
+ul li i a span:hover {
+  color: white;
 }
