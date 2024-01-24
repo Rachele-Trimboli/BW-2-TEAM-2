@@ -40,7 +40,7 @@ const secondsToMinutes = (time) => {
   if (seconds < 10) {
     seconds = `0${seconds}`
   }
-  let result = `${minutes}:${seconds}`
+  let result = `${minutes}min ${seconds} sec.`
   if (hours != 0) {
     result = `${hours}ora ${minutes}min ${seconds}sec.`
   }
@@ -73,4 +73,4 @@ const getAlbum = (albumId) => {
       console.log(error)
     })
 }
-getAlbum('75621062')
+getAlbum(albumId)
