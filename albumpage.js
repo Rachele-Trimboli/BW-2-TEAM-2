@@ -13,7 +13,7 @@ const createTracks = (canzoni) => {
     col.classList.add('pb-2')
     col.innerHTML = `<div class="col-1 text-center pt-3">${i + 1}</div>
         <div class="col-5 p-0 ">
-          <h6>${canzone.title}</h6>
+          <h6 class="text-white">${canzone.title}</h6>
           <p class="m-0 pb-2">${canzone.artist.name}</p>
         </div>
         <div class="col-4 text-center p-0 pt-3">${canzone.rank}</div>
