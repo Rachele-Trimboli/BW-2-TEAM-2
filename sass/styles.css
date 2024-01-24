@@ -10,6 +10,23 @@
 .buonasera li {
   background-color: #2c2c2c;
 }
+.buonasera li:hover {
+  transform: scale(1);
+  box-shadow: 1px 1px 20px 4px #000000;
+}
+
+.colcard:hover {
+  transform: scale(1);
+  box-shadow: 1px 1px 20px 4px #000000;
+}
+
+.artist {
+  color: white;
+}
+.artist:hover {
+  cursor: pointer;
+  color: rgb(19, 180, 19);
+}
 
 .list-group {
   --bs-list-group-color: #f8f9fa;
