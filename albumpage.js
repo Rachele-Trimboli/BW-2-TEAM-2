@@ -17,7 +17,9 @@ const createTracks = (canzoni) => {
           <p class="m-0 pb-2">${canzone.artist.name}</p>
         </div>
         <div class="col-4 text-center p-0 pt-3">${canzone.rank}</div>
-        <div class="col-2 text-center ps-3 pt-3">${canzone.duration}</div>`
+        <div class="col-2 text-center ps-3 pt-3">${secondsToMinutes2(
+          canzone.duration
+        )}</div>`
     const row = document.getElementById('rowTrack')
     row.appendChild(col)
   })
@@ -43,6 +45,30 @@ const secondsToMinutes = (time) => {
   let result = `${minutes}min ${seconds} sec.`
   if (hours != 0) {
     result = `${hours}ora ${minutes}min ${seconds}sec.`
+  }
+  return result
+}
+const secondsToMinutes2 = (time) => {
+  let hours = 0
+  let minutes = 0
+  let seconds = 0
+  if (time >= 60) {
+    minutes = parseInt(time / 60)
+    if (minutes >= 60) {
+      hours = parseInt(minutes / 60)
+      minutes = minutes % 60
+    }
+    seconds = time % 60
+  } else {
+    minutes = 0
+    seconds = time
+  }
+  if (seconds < 10) {
+    seconds = `0${seconds}`
+  }
+  let result = `${minutes}:${seconds}`
+  if (hours != 0) {
+    result = `${hours}:${minutes}:${seconds}`
   }
   return result
 }
