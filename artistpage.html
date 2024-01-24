@@ -19,97 +19,372 @@
   </head>
   <body class="bg-black bg-gradient">
     <main>
-      <div class="container" id="title">
-        <div class="row justify-content-between pt-3" id="sfondo">
-          <div class="col-2">
-            <a class="navbar-brand" href="#"
-              ><i
-                class="bi bi-chevron-left me-2 bg-black text-light rounded-circle px-2 py-1"
-              ></i>
-              <i
-                class="bi bi-chevron-right bg-black text-light rounded-circle px-2 py-1 opacity-75"
-              ></i
-            ></a>
-          </div>
-          <div class="col-2">
-            <div class="dropdown">
-              <button
-                id="dropdownUser"
-                class="btn dropdown-toggle bg-black rounded-5 text-white"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-black d-none d-md-flex"
+          >
+            <div
+              class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+            >
+              <a href="#" class="mb-3"
+                ><i class="bi bi-three-dots text-white"></i
+              ></a>
+              <ul
+                class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                id="menu"
               >
-                <img
-                  width="25px"
-                  height="25px"
-                  class="rounded-circle mx-2"
-                  src="https://c8.alamy.com/compit/d8jc81/band-sul-palco-d8jc81.jpg"
-                  alt="logo_band"
-                />
-                Team 2
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark bg-black">
-                <li>
-                  <button class="dropdown-item" type="button">Profilo</button>
+                <li class="nav-item mb-2">
+                  <i class="bi bi-house-door text-secondary"></i>
+                  <a href="#" class="text-decoration-none"
+                    ><span
+                      id="homepage-span"
+                      class="ms-1 d-none d-sm-inline text-secondary"
+                      >Home</span
+                    ></a
+                  >
                 </li>
-                <li>
-                  <button class="dropdown-item" type="button">
-                    Impostazioni
-                  </button>
+                <li class="nav-item mb-2">
+                  <i class="bi bi-search text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Cerca</span
+                    ></a
+                  >
                 </li>
-                <li>
-                  <button class="dropdown-item" type="button">
-                    Orsi polari
-                  </button>
+
+                <li class="nav-item mb-5">
+                  <i class="bi bi-bookmarks text-secondary"></i>
+                  <a href="#" class="text-decoration-none"
+                    ><span class="ms-1 d-none d-sm-inline text-secondary"
+                      >La tua libreria</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <i class="bi bi-play-circle text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Crea playlist</span
+                    ></a
+                  >
+                </li>
+
+                <li class="nav-item mb-2">
+                  <i class="bi bi-suit-heart text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >Brani che ti piacciono</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <i class="bi bi-bookmark text-secondary"></i>
+                  <a href="#" class="text-decoration-none">
+                    <span class="ms-1 d-none d-sm-inline text-secondary"
+                      >I tuoi episodi</span
+                    ></a
+                  >
+                  <hr class="bg-secondary" />
                 </li>
               </ul>
             </div>
           </div>
-          <div class="row text-white">
-            <h6 class="pt-5 pb-0 m-0">
-              <i class="bi bi-patch-check-fill text-info ms-3"> </i>
-              Artista Verificato
-            </h6>
-            <h1 class="pt-0 display-1 fw-bold ms-3 mb-4">Cantante</h1>
-            <p class="ms-3">3.433.123 ascoltatori mensili</p>
-          </div>
-        </div>
-      </div>
-      <div class="container" id="tracce">
-        <div class="row py-3 align-items-center">
-          <div class="col-1">
-            <i class="bi bi-play-circle-fill text-success fs-1 ps-2 w-100"> </i>
-          </div>
-          <div class="col-1">
-            <button type="button" class="btn btn-outline-light ms-0 btn-sm">
-              FOLLOWING
-            </button>
-          </div>
-          <div class="col-1 mb-0 ms-2">
-            <button type="button" class="btn fs-4 ps-0 text-light border-0">
-              <i class="bi bi-three-dots"></i>
-            </button>
-          </div>
-        </div>
-        <div class="row text-light">
-          <div class="col-8">
-            <h2>Popolari</h2>
-
-            <div class="row mt-4 align-items-center pb-5">
-              <div class="col-1 text-center">1</div>
-              <div class="col-2 p-0">
-                <img src="https:placedog.net/50" />
+          <!-- SEZIONE CENTRALE -->
+          <div class="col py-3 overflow-auto" id="homepage-central">
+            <div class="container" id="title">
+              <div class="row justify-content-between pt-3" id="sfondo">
+                <div class="col-2">
+                  <a class="navbar-brand" href="#"
+                    ><i
+                      class="bi bi-chevron-left me-2 bg-black text-light rounded-circle px-2 py-1"
+                    ></i>
+                    <i
+                      class="bi bi-chevron-right bg-black text-light rounded-circle px-2 py-1 opacity-75"
+                    ></i
+                  ></a>
+                </div>
+                <div class="col-2">
+                  <div class="dropdown">
+                    <button
+                      id="dropdownUser"
+                      class="btn dropdown-toggle bg-black rounded-5 text-white"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        width="25px"
+                        height="25px"
+                        class="rounded-circle mx-2"
+                        src="https://c8.alamy.com/compit/d8jc81/band-sul-palco-d8jc81.jpg"
+                        alt="logo_band"
+                      />
+                      Team 2
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-black">
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          Profilo
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          Impostazioni
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          Orsi polari
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row text-white">
+                  <h6 class="pt-5 pb-0 m-0">
+                    <i class="bi bi-patch-check-fill text-info ms-3"> </i>
+                    Artista Verificato
+                  </h6>
+                  <h1
+                    id="cantante"
+                    class="pt-0 display-1 fw-bold ms-3 mb-4"
+                  ></h1>
+                  <p id="ascoltatori" class="ms-3">ascoltatori mensili</p>
+                </div>
               </div>
-              <div class="col-2">
-                <h6>prova titolo</h6>
-              </div>
-              <div class="col-2 text-center p-0">100000</div>
-              <div class="col-2 text-center ps-5">1:30</div>
             </div>
+            <div class="container" id="tracce">
+              <div class="row py-3 align-items-center">
+                <div class="col-1">
+                  <i
+                    class="bi bi-play-circle-fill text-success fs-1 ps-2 w-100"
+                  >
+                  </i>
+                </div>
+                <div class="col-1">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light ms-0 btn-sm"
+                  >
+                    FOLLOWING
+                  </button>
+                </div>
+                <div class="col-1 mb-0 ms-2">
+                  <button
+                    type="button"
+                    class="btn fs-4 ps-0 text-light border-0"
+                  >
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="row text-light">
+                <div class="col-8">
+                  <h2>Popolari</h2>
+
+                  <div id="rowTrack" class="mt-4 align-items-center pb-5"></div>
+                </div>
+                <div class="col-4">
+                  <h2>Brani che ti piacciono</h2>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
           </div>
-          <div class="col-4">
-            <h2>Brani che ti piacciono</h2>
+          <div
+            class="col-2 d-flex flex-column align-items-stretch flex-shrink-0 bg-dark d-none d-md-flex"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
+            >
+              <svg class="bi me-2" width="30" height="24">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+              <span class="fs-5 fw-semibold text-white">Attività amici</span>
+            </a>
+            <div
+              class="list-group list-group-flush border-bottom scrollarea bg bg-dark scrollarealist-group overflow-auto shadow"
+              style="max-height: 1200px"
+            >
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">Charlie Hookham</strong>
+                  <small>4 ore</small>
+                </div>
+                <div class="col-10 mb-1 small">In Camera-Yumi Zouma</div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">lightdark02</strong>
+                  <small class="text-muted">8 ore</small>
+                </div>
+                <div class="col-10 mb-1 small">Aimed to kill-Jade LeMac</div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">Valeria Traverso</strong>
+                  <small class="text-muted">3 giorni</small>
+                </div>
+                <div class="col-10 mb-1 small">New Kings-Sleeping Wolf</div>
+              </a>
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+                aria-current="true"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Wed</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Tues</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date.
+                </div>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action py-3 lh-tight"
+              >
+                <div
+                  class="d-flex w-100 align-items-center justify-content-between"
+                >
+                  <strong class="mb-1">List group item heading</strong>
+                  <small class="text-muted">Mon</small>
+                </div>
+                <div class="col-10 mb-1 small">
+                  Some placeholder content in a paragraph below the heading and
+                  date..
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
