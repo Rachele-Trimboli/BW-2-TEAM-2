@@ -27,26 +27,60 @@
               </div>
 
               <div class="dropdown">
-                <button id="dropdownUser" class="btn dropdown-toggle bg-black rounded-5 text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img width="25px" height="25px" class="rounded-circle mx-2" src="https://c8.alamy.com/compit/d8jc81/band-sul-palco-d8jc81.jpg" alt="logo_band"> Team 2
+                <button
+                  id="dropdownUser"
+                  class="btn dropdown-toggle bg-black rounded-5 text-white"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    width="25px"
+                    height="25px"
+                    class="rounded-circle mx-2"
+                    src="https://c8.alamy.com/compit/d8jc81/band-sul-palco-d8jc81.jpg"
+                    alt="logo_band"
+                  />
+                  Team 2
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark bg-black">
-                  <li><button class="dropdown-item" type="button">Profilo</button></li>
-                  <li><button class="dropdown-item" type="button">Impostazioni</button></li>
-                  <li><button class="dropdown-item" type="button">Orsi polari</button></li>
+                  <li>
+                    <button class="dropdown-item" type="button">Profilo</button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item" type="button">
+                      Impostazioni
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item" type="button">
+                      Orsi polari
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="row p-3 align-items-end ">
+          <div class="row p-3 align-items-end">
             <div class="col-12 col-lg-3">
-              <img src="https://placedog.net/300" alt="album_img" />
+              <img id="albumPhoto" src="" alt="album_img" />
             </div>
             <div class="col-12 col-lg-9">
               <p class="fw-bold fs-6 m-0">ALBUM</p>
-              <h1 class="display-3 fw-bold mb-4">PROVA TITOLO ALBUM</h1>
+              <h1 id="nomeAlbum" class="display-3 fw-bold mb-4"></h1>
               <p class="m-0">
-                artista &#x2022 anno &#x2022 num brani, durata album 
+                <img
+                  id="bandPhoto"
+                  width="25px"
+                  class="rounded-circle"
+                  height="25px"
+                  src=""
+                  alt="foto_band"
+                />
+                <span id="bandName"> </span><i class="bi bi-dot"></i
+                ><span id="bandAnno"></span><i class="bi bi-dot"></i
+                ><span id="numeroBrani"><span> brani</span></span
+                >, <span id="durataAlbum"></span>
               </p>
             </div>
           </div>
@@ -86,15 +120,7 @@
             <div class="col-2 p-0 border-bottom border-2 text-center">
               <h5><i class="bi bi-clock"></i></h5>
             </div>
-            <div class="row mt-4 align-items-center ">
-              <div class="col-1 text-center">1</div>
-              <div class="col-5 p-0 ">
-                <h6>prova titolo</h6>
-                <p class="m-0">artista</p>
-              </div>
-              <div class="col-4 text-center p-0">100000</div>
-              <div class="col-2 text-center ps-5">1:30</div>
-            </div>
+            <div id="rowTrack" class="mt-4 align-items-center"></div>
           </div>
         </div>
       </section>
@@ -105,5 +131,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="/albumpage.js"></script>
   </body>
 </html>
