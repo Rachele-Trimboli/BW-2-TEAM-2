@@ -57,24 +57,3 @@ const viewApiFunction = function () {
     });
 };
 viewApiFunction();
-
-// const trackList = function () {
-//   fetch("https://api.deezer.com/album/329470657/tracks", {
-//     headers: {
-//       Authorization:
-//         "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFhMzVjOTE4N2U1YzAwMTgxNGM1ZmMiLCJpYXQiOjE3MDU5OTYwNTMsImV4cCI6MTcwNzIwNTY1M30.Ju-0YfIcFvJojPntbOM3hBTb5togegsALw8Xl80OCqM",
-//     },
-//   })
-//     .then((res) => {
-//       if (res.ok) {
-//         return res.json();
-//       } else {
-//         throw new Error();
-//       }
-//     })
-//     .then((tracce) => {
-//       console.log(tracce);
-//     })
-//     .catch((errore) => {});
-// };
-// trackList();

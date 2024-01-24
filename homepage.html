@@ -18,12 +18,11 @@
     />
   </head>
   <body>
-    <header>
+    <main>
       <div class="container-fluid">
         <div class="row">
           <div
             class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-black d-none d-md-flex"
-            id="navbar"
           >
             <div
               class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
@@ -91,6 +90,7 @@
               </ul>
             </div>
           </div>
+          <!-- SEZIONE CENTRALE -->
           <div class="col py-3 overflow-auto" id="homepage-central">
             <!-- <div class="container"> -->
             <div class="row justify-content-between">
@@ -122,14 +122,14 @@
             <div class="row text-white mt-5">
               <div class="col-12">
                 <div class="row justify-content-between" id="hero">
-                  <div class="col-3 px-0">
+                  <div class="col-12 col-md-3 px-0">
                     <img
                       src="./assets/imgs/main/image-1.jpg"
                       alt="primoalbum"
                       class="w-100"
                     />
                   </div>
-                  <div class="col-8 pb-3 pt-3 pb-md-2 pt-md-2">
+                  <div class="col-12 col-md-8 pb-3 pt-3 pb-md-2 pt-md-2">
                     <p>ALBUM</p>
                     <h1 class="display-2 fw-semibold">VIOLA (feat.SALMO)</h1>
                     <p>Fedez,Salmo</p>
@@ -157,9 +157,13 @@
               </div>
             </div>
             <h3 class="text-white mt-3">Buonasera</h3>
-            <div class="row mt-3">
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
+            <div
+              class="row mt-3 text-white text-center g-3 justify-content-around"
+            >
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <!-- <li class="list-group-item text-white fw-semibold mt-4">
                   <img
                     src="./assets/imgs/main/image-2.jpg"
                     alt="copertina"
@@ -167,69 +171,73 @@
                   />
 
                   La tua estate è un film
-                </li>
+                </li> -->
+                <img
+                  src="./assets/imgs/main/image-2.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">La tua estate è un film</span>
               </div>
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-3.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-
-                  Massima concentrazione
-                </li>
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <img
+                  src="./assets/imgs/main/image-3.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">Massima concentrazione</span>
               </div>
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-4.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-                  Soft Piano
-                </li>
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <img
+                  src="./assets/imgs/main/image-4.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">Soft Piano</span>
               </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-5.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-                  Soft Beats
-                </li>
+              <!-- </div> -->
+              <!-- <div class="row mt-3"> -->
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <img
+                  src="./assets/imgs/main/image-5.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">Soft Beats</span>
               </div>
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-6.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-                  Jazz Vibes
-                </li>
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <img
+                  src="./assets/imgs/main/image-6.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">Jazz Vibes</span>
               </div>
-              <div class="col-4 buonasera">
-                <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-7.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-
-                  Caffè del Buongiorno
-                </li>
+              <div
+                class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
+              >
+                <img
+                  src="./assets/imgs/main/image-7.jpg"
+                  alt="foto"
+                  style="width: 23%"
+                />
+                <span class="ps-2 fw-semibold">Caffè del buongiorno</span>
               </div>
             </div>
             <h5 class="text-white my-4">Altro di ciò che ti piace</h5>
-            <div class="row mt-3 g-3 mb-4 justify-content-between">
+            <div class="row mt-3 g-3 justify-content-between mb-5 pb-5">
               <div
-                class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0 colcard"
+                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
               >
-                <div class="card border-0" style="height: 100%">
+                <div class="card border-0">
                   <!-- <img
                     src="./assets/imgs/main/image-8.jpg"
                     class="card-img-top"
@@ -244,9 +252,9 @@
                 </div>
               </div>
               <div
-                class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0 colcard"
+                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
               >
-                <div class="card border-0" style="height: 100%">
+                <div class="card border-0">
                   <!-- <img
                     src="./assets/imgs/main/image-8.jpg"
                     class="card-img-top"
@@ -261,9 +269,9 @@
                 </div>
               </div>
               <div
-                class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0 colcard"
+                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
               >
-                <div class="card border-0" style="height: 100%">
+                <div class="card border-0">
                   <!-- <img
                     src="./assets/imgs/main/image-8.jpg"
                     class="card-img-top"
@@ -278,9 +286,9 @@
                 </div>
               </div>
               <div
-                class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0 colcard"
+                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
               >
-                <div class="card border-0" style="height: 100%">
+                <div class="card border-0">
                   <!-- <img
                     src="./assets/imgs/main/image-8.jpg"
                     class="card-img-top"
@@ -295,9 +303,9 @@
                 </div>
               </div>
               <div
-                class="col-6 col-md-4 col-lg-2 bg-dark p-2 rounded border-0 colcard"
+                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
               >
-                <div class="card border-0" style="height: 100%">
+                <div class="card border-0">
                   <!-- <img
                     src="./assets/imgs/main/image-8.jpg"
                     class="card-img-top"
@@ -328,7 +336,7 @@
             </a>
             <div
               class="list-group list-group-flush border-bottom scrollarea bg bg-dark scrollarealist-group overflow-auto shadow"
-              style="max-height: 1000px"
+              style="max-height: 1200px"
             >
               <a
                 href="#"
@@ -510,77 +518,8 @@
           </div>
         </div>
       </div>
-    </header>
-    <main></main>
+    </main>
     <footer>
-      <!----------- ROW E COL ESTERNE---------->
-      <!-- <div class="container-fluid">
-        <div
-          class="row bg-dark border-top border-secondary border-opacity-25 fixed-bottom align-items-center justify-content-between"
-        >
-          <div class="col-6 col-md-3 p-1"> -->
-      <!-- --------------PRIMA  ROW  INTERNA (parte sinistra)------------>
-      <!-- <div class="row align-items-center p-3 justify-content-start">
-              <div class="col-2 d-flex justify-content-end">
-                <img
-                  src="./assets/imgs/search/image-1.jpeg"
-                  alt="image"
-                  class="w-100"
-                />
-              </div>
-              <div class="col-5">
-                <p class="text-white fs-6 mb-0 text-center">Fat Fanny Friend</p>
-                <p class="text-secondary fs-6 text-center">Maddie Zahm</p>
-              </div>
-              <div class="col-1">
-                <i class="bi bi-heart text-white"></i>
-              </div>
-            </div>
-          </div>  -->
-
-      <!------------SECONDA  ROW  INTERNA (parte centrale)--------- -->
-
-      <!-- <div class="col-6 col-md-4 p-1 d-flex justify-content-center">
-            <div class="row justify-content-center align-items-center p-3">
-              <div
-                class="col-12 d-flex align-items-center justify-content-center"
-              >
-                <a href="#">
-                  <i class="bi bi-shuffle text-white mx-2 fs-4"></i
-                ></a>
-                <a href="#">
-                  <i class="bi bi-skip-backward text-white mx-2 fs-4"></i
-                ></a>
-                <a href="#"
-                  ><i class="bi bi-play-circle-fill text-white fs-1 mx-2"></i
-                ></a>
-                <a href="#">
-                  <i class="bi bi-skip-forward text-white mx-2 fs-4"></i
-                ></a>
-                <a href="#">
-                  <i class="bi bi-download text-white mx-2 fs-4"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-      <!--------------- TERZA COL ESTERNA (DESTRA) ------------------->
-
-      <!-- <div class="col-3 p-1">
-            <div class="row justify-content-end align-items-center p-3">
-              <div class="col-8 d-none d-md-flex">
-                <a href="#"><i class="bi bi-mic text-white fs-4"></i></a>
-                <a href="#"
-                  ><i class="bi bi-soundwave text-white fs-4 mx-2"></i
-                ></a>
-                <a href="#"
-                  ><i class="bi bi-journal-album text-white fs-4"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <nav class="navbar navbar-expand-lg bg-dark text-white fixed-bottom">
         <div class="container-fluid">
           <button

@@ -7,10 +7,10 @@
   background: linear-gradient(49deg, #000, rgba(173, 181, 189, 0.1215686275));
 }
 
-.buonasera li {
+.buonasera {
   background-color: #2c2c2c;
 }
-.buonasera li:hover {
+.buonasera:hover {
   transform: scale(1);
   box-shadow: 1px 1px 20px 4px #000000;
 }
@@ -58,7 +58,9 @@
 }
 
 #sfondo {
-  background-image: url(../assets/imgs/main/image-11.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*!
