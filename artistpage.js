@@ -77,8 +77,9 @@ const createTracks = (tracks) => {
     col.addEventListener("click", function () {
       imgFooter.setAttribute("src", track.album.cover);
       nomeCantante.innerHTML = `${track.artist.name}`;
-
       nomeCanzone.innerHTML = `${track.title}`;
+      const player = document.getElementById("player");
+      player.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"></audio>`;
     });
   });
 };

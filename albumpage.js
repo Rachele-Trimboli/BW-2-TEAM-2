@@ -31,6 +31,8 @@ const createTracks = (canzoni) => {
       console.log(canzone.album.cover);
       nomeCanzone.innerHTML = `${canzone.title}`;
       nomeCantante.innerHTML = `${canzone.artist.name}`;
+      const player = document.getElementById("player");
+      player.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     });
   });
 };
