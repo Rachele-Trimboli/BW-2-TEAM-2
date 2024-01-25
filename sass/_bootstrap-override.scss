@@ -5,7 +5,8 @@
 
 $new-theme-colors: (
   // "color-name": #color
-  'blackButton': #423918
+  'blackButton': #423918,
+  'spotifygreen': #1ed760
 );
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
