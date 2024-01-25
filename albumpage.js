@@ -22,7 +22,7 @@ const createTracks = (canzoni) => {
         )}</div>`;
     const row = document.getElementById("rowTrack");
     row.appendChild(col);
-    const footerImg = document.querySelector("footer img");
+    const footerImg = document.getElementById("fotocanzone");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
     col.addEventListener("click", function () {
