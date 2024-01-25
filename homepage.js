@@ -33,7 +33,7 @@ const viewApiFunction = function () {
                       alt="copertina"
 
                     />
-                    <div class="card-body bg-dark p-1 d-flex flex-column justify-content-between align-items-start">
+                    <div class="card-body h-100 bg-dark p-1 d-flex flex-column justify-content-between align-items-start">
                     <p class="card-text fw-semibold text-white">
                       ${album.title}
                     </p>
