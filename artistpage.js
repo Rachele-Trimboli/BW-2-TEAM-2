@@ -71,7 +71,7 @@ const createTracks = (tracks) => {
       )}</div>`;
     const row = document.getElementById("rowTrack");
     row.appendChild(col);
-    const imgFooter = document.querySelector("footer img");
+    const imgFooter = document.getElementById("fotofooter");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
     col.addEventListener("click", function () {
