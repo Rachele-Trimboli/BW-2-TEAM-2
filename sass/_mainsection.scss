@@ -28,3 +28,16 @@
     color: rgb(19, 180, 19);
   }
 }
+
+#page-central{
+  background: linear-gradient(49deg, #000, #adb5bd1f);
+}
+.nav-item{
+  ul{
+    li{
+      a:hover{
+        color: white;
+      }
+    }
+  }
+}

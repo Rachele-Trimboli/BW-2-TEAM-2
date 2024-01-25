@@ -35,11 +35,12 @@ searchButton.addEventListener("click", function (e) {
           "text-white"
         );
         searched.innerHTML = `
-        <div class="col-3">
+        <div class="col-3 d-flex justify-content-end">
                   <img
                     src="${data.data[i].album.cover}"
                     alt="copertina"
                     width="50px"
+                    
                   />
                 </div>
                 <div class="col-6">
