@@ -28,6 +28,14 @@
   color: rgb(19, 180, 19);
 }
 
+#page-central {
+  background: linear-gradient(49deg, #000, rgba(173, 181, 189, 0.1215686275));
+}
+
+.nav-item ul li a:hover {
+  color: white;
+}
+
 .list-group {
   --bs-list-group-color: #f8f9fa;
   --bs-list-group-bg: #000;

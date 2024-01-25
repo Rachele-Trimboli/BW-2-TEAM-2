@@ -18,6 +18,7 @@
     />
   </head>
   <body>
+    <!-------------- SIDEBAR SINISTRA  ------------->
     <main>
       <div class="container-fluid">
         <div class="row">
@@ -44,9 +45,9 @@
                     ></a
                   >
                 </li>
-                <li class="nav-item mb-2">
+                <li class="nav-item mb-2" id="cerca">
                   <i class="bi bi-search text-secondary"></i>
-                  <a href="#" class="text-decoration-none">
+                  <a href="./searchpage.html" class="text-decoration-none">
                     <span class="ms-1 d-none d-sm-inline text-secondary"
                       >Cerca</span
                     ></a
@@ -90,9 +91,7 @@
               </ul>
             </div>
           </div>
-          <!-- SEZIONE CENTRALE -->
           <div class="col py-3 overflow-auto" id="homepage-central">
-            <!-- <div class="container"> -->
             <div class="row justify-content-between align-items-center">
               <div class="col-3">
                 <a href="#"
@@ -106,7 +105,20 @@
                   ></i
                 ></a>
               </div>
-              <!---------------- PROFILO UTENTE  --------------->
+              <div class="col-5 justify-content-center align-items-center">
+                <a href="#"
+                  ><i class="bi bi-house-door text-secondary fs-1 d-md-none"></i
+                ></a>
+                <a href="#"
+                  ><i
+                    class="bi bi-search text-secondary fs-1 mx-1 d-md-none"
+                  ></i
+                ></a>
+                <a href="#">
+                  <i class="bi bi-bookmarks text-secondary d-md-none fs-1"></i>
+                </a>
+              </div>
+              <!---------------- PROFILO UTENTE E FRECCETTE --------------->
               <div class="col-3" id="profilo">
                 <button
                   id="dropdownUser"
@@ -139,15 +151,18 @@
                 </ul>
               </div>
             </div>
+            <!-- SEZIONE CENTRALE -->
 
             <div class="row text-white mt-5">
               <div class="col-12">
                 <div class="row justify-content-around" id="hero">
-                  <div class="col-12 col-md-6 col-lg-3 px-0">
+                  <div
+                    class="col-12 col-md-6 col-lg-3 px-0 d-flex justify-content-center"
+                  >
                     <img
                       src="./assets/imgs/main/image-1.jpg"
                       alt="primoalbum"
-                      class="w-100 mt-5"
+                      class="mt-5"
                     />
                   </div>
                   <div class="col-12 col-md-8 pb-3 pt-3 pb-md-2 pt-md-2">
@@ -184,15 +199,6 @@
               <div
                 class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
               >
-                <!-- <li class="list-group-item text-white fw-semibold mt-4">
-                  <img
-                    src="./assets/imgs/main/image-2.jpg"
-                    alt="copertina"
-                    style="width: 23%"
-                  />
-
-                  La tua estate è un film
-                </li> -->
                 <img
                   src="./assets/imgs/main/image-2.jpg"
                   alt="foto"
@@ -220,8 +226,6 @@
                 />
                 <span class="ps-2 fw-semibold">Soft Piano</span>
               </div>
-              <!-- </div> -->
-              <!-- <div class="row mt-3"> -->
               <div
                 class="col-6 col-lg-3 me-1 ms-1 buonasera d-flex align-items-center justify-content-start px-0"
               >
@@ -254,94 +258,23 @@
               </div>
             </div>
             <h5 class="text-white my-4">Altro di ciò che ti piace</h5>
-            <div class="row mt-3 g -3 justify-content-between mb-5 pb-5">
-              <div
-                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
-              >
-                <div class="card border-0">
-                  <!-- <img
-                    src="./assets/imgs/main/image-8.jpg"
-                    class="card-img-top"
-                    alt="copertina"
-                  /> -->
-                  <!-- <div class="card-body bg-dark p-1">
-                    <p class="card-text fw-semibold text-white">
-                      Titolo Canzone
-                    </p>
-                    <p class="text-white">Descrizione</p>
-                  </div> -->
-                </div>
+            <div class="row mt-3 g-3 justify-content-around mb-5 pb-5">
+              <div class="col-5 col-lg-2 colcard bg-dark p-2 rounded border-0">
+                <div class="card border-0"></div>
               </div>
-              <div
-                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
-              >
-                <div class="card border-0">
-                  <!-- <img
-                    src="./assets/imgs/main/image-8.jpg"
-                    class="card-img-top"
-                    alt="copertina"
-                  />
-                  <div class="card-body bg-dark p-1">
-                    <p class="card-text fw-semibold text-white">
-                      Titolo Canzone
-                    </p>
-                    <p class="text-white">Descrizione</p>
-                  </div> -->
-                </div>
+              <div class="col-5 col-lg-2 colcard bg-dark p-2 rounded border-0">
+                <div class="card border-0"></div>
               </div>
-              <div
-                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
-              >
-                <div class="card border-0">
-                  <!-- <img
-                    src="./assets/imgs/main/image-8.jpg"
-                    class="card-img-top"
-                    alt="copertina"
-                  />
-                  <div class="card-body bg-dark p-1">
-                    <p class="card-text fw-semibold text-white">
-                      Titolo Canzone
-                    </p>
-                    <p class="text-white">Descrizione</p>
-                  </div> -->
-                </div>
+              <div class="col-5 col-lg-2 colcard bg-dark p-2 rounded border-0">
+                <div class="card border-0"></div>
               </div>
-              <div
-                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
-              >
-                <div class="card border-0">
-                  <!-- <img
-                    src="./assets/imgs/main/image-8.jpg"
-                    class="card-img-top"
-                    alt="copertina"
-                  />
-                  <div class="card-body bg-dark p-1">
-                    <p class="card-text fw-semibold text-white">
-                      Titolo Canzone
-                    </p>
-                    <p class="text-white">Descrizione</p>
-                  </div> -->
-                </div>
+              <div class="col-5 col-lg-2 colcard bg-dark p-2 rounded border-0">
+                <div class="card border-0"></div>
               </div>
-              <div
-                class="col-6 col-md-4 col-lg-2 colcard bg-dark p-2 rounded border-0"
-              >
-                <div class="card border-0">
-                  <!-- <img
-                    src="./assets/imgs/main/image-8.jpg"
-                    class="card-img-top"
-                    alt="copertina"
-                  />
-                  <div class="card-body bg-dark p-1">
-                    <p class="card-text fw-semibold text-white">
-                      Titolo Canzone
-                    </p>
-                    <p class="text-white">Descrizione</p>
-                  </div> -->
-                </div>
+              <div class="col-5 col-lg-2 colcard bg-dark p-2 rounded border-0">
+                <div class="card border-0"></div>
               </div>
             </div>
-            <!-- </div> -->
           </div>
           <div
             class="col-2 d-flex flex-column align-items-stretch flex-shrink-0 bg-dark d-none d-md-flex"
@@ -353,6 +286,7 @@
               <svg class="bi me-2" width="30" height="24">
                 <use xlink:href="#bootstrap"></use>
               </svg>
+              <!---------------- SIDEBAR DESTRA  ------------>
               <span class="fs-5 fw-semibold text-white">Attività amici</span>
             </a>
             <div
@@ -540,22 +474,29 @@
         </div>
       </div>
     </main>
+    <!------------  PLAYER  ---------->
     <footer>
       <nav class="navbar navbar-expand-lg bg-dark text-white fixed-bottom">
         <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!---------------  PLAYER  ---------------->
+          <div class="d-flex d-md-none justify-content-between w-100">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                src="./assets/imgs/main/image-11.jpg"
+                alt="foto"
+                width="50"
+                height="50"
+              />
+              <p class="mb-0 ms-3">Song title</p>
+            </div>
+            <div class="d-flex justify-content-end align-items-center">
+              <a href="#"> <i class="bi bi-phone text-white fs-2"></i></a>
+              <a href="#"><i class="bi bi-heart text-white fs-2"></i></a>
+              <a href="#"> <i class="bi bi-play-fill fs-1 text-white"></i></a>
+            </div>
+          </div>
           <div
-            class="collapse navbar-collapse justify-content-between"
+            class="collapse navbar-collapse justify-content-between d-md-flex"
             id="navbarTogglerDemo03"
           >
             <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
@@ -583,10 +524,6 @@
                 ></a>
               </li>
             </ul>
-            <!-- <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
             <div>
               <i class="bi bi-shuffle text-white mx-2 fs-4"></i>
               <i class="bi bi-skip-backward text-white mx-2 fs-4"></i>

@@ -71,14 +71,15 @@ const createTracks = (tracks) => {
       )}</div>`;
     const row = document.getElementById("rowTrack");
     row.appendChild(col);
-    const imgFooter = document.querySelector("footer img");
+    const imgFooter = document.getElementById("fotofooter");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
     col.addEventListener("click", function () {
       imgFooter.setAttribute("src", track.album.cover);
       nomeCantante.innerHTML = `${track.artist.name}`;
-
       nomeCanzone.innerHTML = `${track.title}`;
+      const player = document.getElementById("player");
+      player.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"></audio>`;
     });
   });
 };

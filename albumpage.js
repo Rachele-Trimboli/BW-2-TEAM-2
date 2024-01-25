@@ -22,14 +22,17 @@ const createTracks = (canzoni) => {
         )}</div>`;
     const row = document.getElementById("rowTrack");
     row.appendChild(col);
-    const footerImg = document.querySelector("footer img");
+    const footerImg = document.getElementById("fotocanzone");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
     col.addEventListener("click", function () {
       footerImg.setAttribute("src", canzone.album.cover);
-
+      console.log(footerImg);
+      console.log(canzone.album.cover);
       nomeCanzone.innerHTML = `${canzone.title}`;
       nomeCantante.innerHTML = `${canzone.artist.name}`;
+      const player = document.getElementById("player");
+      player.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     });
   });
 };
