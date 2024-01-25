@@ -27,7 +27,8 @@ const createTracks = (canzoni) => {
     const nomeCanzone = document.getElementById("nomecanzone");
     col.addEventListener("click", function () {
       footerImg.setAttribute("src", canzone.album.cover);
-
+      console.log(footerImg);
+      console.log(canzone.album.cover);
       nomeCanzone.innerHTML = `${canzone.title}`;
       nomeCantante.innerHTML = `${canzone.artist.name}`;
     });
