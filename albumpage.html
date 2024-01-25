@@ -135,7 +135,7 @@
             class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-black d-none d-md-flex"
           >
             <div
-              class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+              class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 position-fixed"
             >
               <a href="#" class="mb-3"
                 ><i class="bi bi-three-dots text-white"></i
@@ -237,7 +237,10 @@
                       </div>
 
                       <!---------- PROFILO UTENTE --------------->
-                      <div class="col-3" id="profilo">
+                      <div
+                        class="col-3 d-flex justify-content-end"
+                        id="profilo"
+                      >
                         <button
                           id="dropdownUser"
                           class="btn dropdown-toggle bg-black rounded-5 text-white"
@@ -252,7 +255,7 @@
                             src="https://cdn-p.smehost.net/sites/239008154bb641859bcbbc74541773c3/wp-content/uploads/2022/11/Spotify_profile_tips_1200x800.jpg"
                             alt="logo_band"
                           />
-                          Profilo utente
+                          <span class="d-none d-md-inline">Profilo utente</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark bg-black">
                           <li>
@@ -351,12 +354,16 @@
               <svg class="bi me-2" width="30" height="24">
                 <use xlink:href="#bootstrap"></use>
               </svg>
-              <span class="fs-5 fw-semibold text-white">Attività amici</span>
             </a>
             <div
-              class="list-group list-group-flush border-bottom scrollarea bg bg-dark scrollarealist-group overflow-auto shadow"
+              class="list-group list-group-flush border-bottom scrollarea bg bg-black scrollarealist-group overflow-auto shadow position-fixed"
               style="max-height: 1000px"
             >
+              <span class="fs-5 fw-semibold text-white my-3 text-center"
+                >Attività amici</span
+              >
+              <hr class="border border-white" />
+
               <a
                 href="#"
                 class="list-group-item list-group-item-action py-3 lh-tight"
