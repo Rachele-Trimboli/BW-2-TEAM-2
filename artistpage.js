@@ -1,63 +1,63 @@
-const artistId = new URLSearchParams(window.location.search).get('artistId')
-const cantante = document.getElementById('cantante')
-const ascoltatori = document.getElementById('ascoltatori')
-const sfondo = document.getElementById('sfondo')
+const artistId = new URLSearchParams(window.location.search).get("artistId");
+const cantante = document.getElementById("cantante");
+const ascoltatori = document.getElementById("ascoltatori");
+const sfondo = document.getElementById("sfondo");
 
 const secondsToMinutes = (time) => {
-  let hours = 0
-  let minutes = 0
-  let seconds = 0
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
   if (time >= 60) {
-    minutes = parseInt(time / 60)
+    minutes = parseInt(time / 60);
     if (minutes >= 60) {
-      hours = parseInt(minutes / 60)
-      minutes = minutes % 60
+      hours = parseInt(minutes / 60);
+      minutes = minutes % 60;
     }
-    seconds = time % 60
+    seconds = time % 60;
   } else {
-    minutes = 0
-    seconds = time
+    minutes = 0;
+    seconds = time;
   }
   if (seconds < 10) {
-    seconds = `0${seconds}`
+    seconds = `0${seconds}`;
   }
-  let result = `${minutes}min ${seconds} sec.`
+  let result = `${minutes}min ${seconds} sec.`;
   if (hours != 0) {
-    result = `${hours}ora ${minutes}min ${seconds}sec.`
+    result = `${hours}ora ${minutes}min ${seconds}sec.`;
   }
-  return result
-}
+  return result;
+};
 const secondsToMinutes2 = (time) => {
-  let hours = 0
-  let minutes = 0
-  let seconds = 0
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
   if (time >= 60) {
-    minutes = parseInt(time / 60)
+    minutes = parseInt(time / 60);
     if (minutes >= 60) {
-      hours = parseInt(minutes / 60)
-      minutes = minutes % 60
+      hours = parseInt(minutes / 60);
+      minutes = minutes % 60;
     }
-    seconds = time % 60
+    seconds = time % 60;
   } else {
-    minutes = 0
-    seconds = time
+    minutes = 0;
+    seconds = time;
   }
   if (seconds < 10) {
-    seconds = `0${seconds}`
+    seconds = `0${seconds}`;
   }
-  let result = `${minutes}:${seconds}`
+  let result = `${minutes}:${seconds}`;
   if (hours != 0) {
-    result = `${hours}:${minutes}:${seconds}`
+    result = `${hours}:${minutes}:${seconds}`;
   }
-  return result
-}
+  return result;
+};
 
 const createTracks = (tracks) => {
   tracks.data.forEach((track, i) => {
-    const col = document.createElement('div')
-    col.classList.add('row')
-    col.classList.add('pb-3')
-    col.classList.add('align-items-center')
+    const col = document.createElement("div");
+    col.classList.add("row");
+    col.classList.add("pb-3");
+    col.classList.add("align-items-center");
     col.innerHTML = ` <div class="col-1 text-center">${i + 1}</div>
       <div class="col-1 p-0">
         <img src="${track.album.cover_small}" width="35px"/>
@@ -68,49 +68,58 @@ const createTracks = (tracks) => {
       <div class="col-2 text-center p-0">${track.rank}</div>
       <div class="col-2 text-center pe-3 ps-5">${secondsToMinutes2(
         track.duration
-      )}</div>`
-    const row = document.getElementById('rowTrack')
-    row.appendChild(col)
-  })
-}
+      )}</div>`;
+    const row = document.getElementById("rowTrack");
+    row.appendChild(col);
+    const imgFooter = document.querySelector("footer img");
+    const nomeCantante = document.getElementById("nomecantante");
+    const nomeCanzone = document.getElementById("nomecanzone");
+    col.addEventListener("click", function () {
+      imgFooter.setAttribute("src", track.album.cover);
+      nomeCantante.innerHTML = `${track.artist.name}`;
+
+      nomeCanzone.innerHTML = `${track.title}`;
+    });
+  });
+};
 
 const getArtists = (artistId) => {
-  fetch('https://striveschool-api.herokuapp.com/api/deezer/artist/' + artistId)
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/" + artistId)
     .then((response) => {
-      console.log(response)
+      console.log(response);
       if (response.ok) {
-        return response.json()
+        return response.json();
       } else {
-        throw new Error('Errore nella chiamata del server!')
+        throw new Error("Errore nella chiamata del server!");
       }
     })
     .then((artistData) => {
       // ---QUI MANIPOLO I DATI DELL'ARTISTA
-      console.log(artistData)
-      cantante.innerText = artistData.name
-      ascoltatori.innerText = artistData.nb_fan + ' ascoltatori mensili'
+      console.log(artistData);
+      cantante.innerText = artistData.name;
+      ascoltatori.innerText = artistData.nb_fan + " ascoltatori mensili";
       sfondo.setAttribute(
-        'style',
+        "style",
         `background-image: url(${artistData.picture_big})`
-      )
+      );
       fetch(artistData.tracklist)
         .then((response) => {
-          console.log(response)
+          console.log(response);
           if (response.ok) {
-            return response.json()
+            return response.json();
           } else {
-            throw new Error('Errore nella chiamata del server!')
+            throw new Error("Errore nella chiamata del server!");
           }
         })
         .then((tracksData) => {
           // --- QUI MANIPOLO LA SEZIONE POPOLARI
 
-          console.log(tracksData)
-          createTracks(tracksData)
-        })
+          console.log(tracksData);
+          createTracks(tracksData);
+        });
     })
     .catch((error) => {
-      console.log(error)
-    })
-}
-getArtists(artistId)
+      console.log(error);
+    });
+};
+getArtists(artistId);
