@@ -18,11 +18,8 @@
   </head>
   <body class="bg-black bg-gradient">
     <main>
-      <div class="container" id="title">
-        <div
-          class="row justify-content-between align-items-center pt-3"
-          id="sfondo"
-        >
+      <div class="container-fluid" id="title">
+        <div class="row justify-content-between align-items-center" id="sfondo">
           <div class="col-2">
             <a class="navbar-brand" href="#"
               ><i
@@ -46,7 +43,7 @@
           </div>
 
           <!-----------PROFILO UTENTE---------->
-          <div class="col-3" id="profilo">
+          <div class="col-6" id="profilo">
             <button
               id="dropdownUser"
               class="btn dropdown-toggle bg-black rounded-5 text-white"
@@ -77,6 +74,27 @@
               </li>
             </ul>
           </div>
+          <!--------PROFILO UTENTE VERSIONE MOBILE  ----------->
+          <div class="row"></div>
+          <div class="col-5 d-md-none bg-white">
+            <button
+              class="dropdown-menu dropdown-menu-dark bg-black d-md-none"
+              type="button"
+            >
+              dropdown
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark bg-black">
+              <li>
+                <button class="dropdown-item" type="button">Account</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  Impostazioni
+                </button>
+              </li>
+            </ul>
+          </div>
+
           <!----------  SEZIONE CENTRALE ------------>
 
           <div class="row text-white">
