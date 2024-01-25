@@ -2,6 +2,7 @@ const card = document.getElementsByClassName("card border-0");
 console.log(card);
 const addressBarContent = new URLSearchParams(location.search);
 const searchAlbumId = addressBarContent.get("albumId");
+const searchIcon = document.getElementById("cerca");
 
 const viewApiFunction = function () {
   fetch("  https://striveschool-api.herokuapp.com/api/deezer/search?q=pop", {
