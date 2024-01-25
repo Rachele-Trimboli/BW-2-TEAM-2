@@ -25,14 +25,20 @@ const createTracks = (canzoni) => {
     const footerImg = document.getElementById("fotocanzone");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
+    const mobileFoto = document.getElementById("mobileFotoPlayer");
+    const mobileTitle = document.getElementById("mobileTitle");
     col.addEventListener("click", function () {
       footerImg.setAttribute("src", canzone.album.cover);
       console.log(footerImg);
       console.log(canzone.album.cover);
       nomeCanzone.innerHTML = `${canzone.title}`;
       nomeCantante.innerHTML = `${canzone.artist.name}`;
+      mobileTitle.innerHTML = `${canzone.title}`;
+      mobileFoto.setAttribute("src", canzone.album.cover);
       const player = document.getElementById("player");
+      const player2 = document.getElementById("player2");
       player.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+      player2.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     });
   });
 };
@@ -112,3 +118,4 @@ const getAlbum = (albumId) => {
     });
 };
 getAlbum(albumId);
+
