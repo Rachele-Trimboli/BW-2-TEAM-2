@@ -213,9 +213,11 @@
                         <a class="navbar-brand" href="#"
                           ><i
                             class="bi bi-chevron-left me-2 bg-black text-light rounded-circle px-2 py-1"
+                            id="back-arrow3"
                           ></i>
                           <i
                             class="bi bi-chevron-right bg-black text-light rounded-circle px-2 py-1 opacity-75"
+                            id="forward-arrow3"
                           ></i
                         ></a>
                       </div>
@@ -360,7 +362,7 @@
               class="list-group list-group-flush border-bottom scrollarea bg bg-black scrollarealist-group overflow-auto shadow position-fixed"
               style="max-height: 1200px"
             >
-              <span class="fs-5 fw-semibold text-white ms-3 my-3"
+              <span class="fs-5 fw-semibold text-white text-center my-3"
                 >Attività amici</span
               >
               <hr class="border border-white" />
@@ -622,7 +624,9 @@
                   id="nomecanzone"
                   >Fat Fanny Friend</a
                 >
-                <p class="text-center fs-6" id="nomecantante">Maddie Zahm</p>
+                <p class="text-center fs-6 text-secondary" id="nomecantante">
+                  Maddie Zahm
+                </p>
               </li>
               <li
                 class="nav-item d-flex justify-content-center align-items-center"
@@ -653,6 +657,17 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="/albumpage.js"></script>
+    <script src="albumpage.js"></script>
+    <script>
+      const forwardArrow3 = document.getElementById("forward-arrow3");
+      forwardArrow3.addEventListener("click", function () {
+        location.href = "./homepage.html";
+      });
+
+      const backArrow3 = document.getElementById("back-arrow3");
+      backArrow3.addEventListener("click", function () {
+        location.href = "./artistpage.html";
+      });
+    </script>
   </body>
 </html>

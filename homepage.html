@@ -101,11 +101,13 @@
                 <a href="#"
                   ><i
                     class="bi bi-chevron-left me-2 bg-dark text-light rounded-circle px-2 py-1"
+                    id="back-arrow"
                   ></i
                 ></a>
                 <a href="#"
                   ><i
                     class="bi bi-chevron-right me-2 bg-dark text-light rounded-circle px-2 py-1"
+                    id="forward-arrow"
                   ></i
                 ></a>
               </div>
@@ -303,7 +305,7 @@
               class="list-group list-group-flush border-bottom scrollarea bg bg-black scrollarealist-group overflow-auto shadow position-fixed"
               style="max-height: 1200px"
             >
-              <span class="fs-5 fw-semibold text-white ms-3 my-3"
+              <span class="fs-5 fw-semibold text-white text-center my-3"
                 >Attività amici</span
               >
               <hr class="border border-white" />
@@ -381,13 +383,13 @@
                     width="25px"
                     height="25px"
                     class="rounded-circle mx-2"
-                    src="https://cdn-p.smehost.net/sites/239008154bb641859bcbbc74541773c3/wp-content/uploads/2022/11/Spotify_profile_tips_1200x800.jpg"
+                    src="./assets/E67C63F4-E69F-46CC-8304-8BEBE849A5AE.jpg"
                     alt="logo_band"
                   />
                   <strong class="mb-1">Wendy De Luca</strong>
                   <small>Wed</small>
                 </div>
-                <div class="col-10 mb-1 small">Ainsi Bas La Vida-Indila</div>
+                <div class="col-10 mb-1 small">Alicia Keys-Fallin'</div>
               </a>
               <a
                 href="#"
@@ -400,7 +402,7 @@
                     width="25px"
                     height="25px"
                     class="rounded-circle mx-2"
-                    src="https://cdn-p.smehost.net/sites/239008154bb641859bcbbc74541773c3/wp-content/uploads/2022/11/Spotify_profile_tips_1200x800.jpg"
+                    src="./assets/imgs/main/image-1.jpg"
                     alt="logo_band"
                   />
                   <strong class="mb-1">Luca Armagno</strong>
@@ -524,7 +526,6 @@
     <footer>
       <nav class="navbar navbar-expand-lg bg-dark text-white fixed-bottom">
         <div class="container-fluid">
-          <!---------------  PLAYER  ---------------->
           <div class="d-flex d-md-none justify-content-between w-100">
             <div class="d-flex justify-content-center align-items-center">
               <img
@@ -597,5 +598,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="./homepage.js"></script>
+    <script>
+      const forwardArrow = document.getElementById("forward-arrow");
+      forwardArrow.addEventListener("click", function () {
+        location.href = "./artistpage.html";
+      });
+
+      const backArrow = document.getElementById("back-arrow");
+      backArrow.addEventListener("click", function () {
+        location.href = "./albumpage.html";
+      });
+    </script>
   </body>
 </html>
