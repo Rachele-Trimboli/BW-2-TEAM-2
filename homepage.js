@@ -38,7 +38,7 @@ const viewApiFunction = function () {
                       ${album.title}
                     </p>
                     <p class="artist">${data.data[i].artist.name}</p>
-                    <button type="button" class="btn btn-success rounded-circle text-black play"><i class="bi bi-play-circle-fill bg-success"></i></button>
+                    <button type="button" class="btn btn-spotifygreen rounded-circle text-black play"><i class="bi bi-play-circle-fill bg-spotifygreen"></i></button>
                     </div>
         `;
         const button = document.getElementsByClassName("play");
