@@ -45,6 +45,7 @@ const createTracks = (canzoni) => {
       const newLi = document.createElement("li");
       newLi.innerText = `${canzone.title}`;
       newLi.classList.add("nav-item");
+      canzoniAscoltate.push(newLi.innerText);
       menu.appendChild(newLi);
       const newSong = {
         title: canzone.title,

@@ -3,6 +3,9 @@ const inputField = document.getElementById("inputText");
 const searchButton = document.getElementById("searchButton");
 const pageCentral = document.getElementById("page-central");
 const albumId = new URLSearchParams(window.location.search).get("albumId");
+const canzoniAscoltate = localStorage.getItem("canzoniAscoltate")
+  ? JSON.parse(localStorage.getItem("canzoniAscoltate"))
+  : [];
 
 searchButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -58,3 +61,33 @@ searchButton.addEventListener("click", function (e) {
       console.log("errore nella chiamata", err);
     });
 });
+
+const playerFunction = function () {
+  const currentSong = JSON.parse(localStorage.getItem("canzoneInAtto"));
+  const songsAscoltate = JSON.parse(localStorage.getItem("canzoniAscoltate"));
+
+  console.log(currentSong);
+  if (currentSong) {
+    const player = document.getElementById("player");
+    const player2 = document.getElementById("player2");
+    const footerImg = document.getElementById("fotocanzone");
+    const nomeCantante = document.getElementById("nomecantante");
+    const nomeCanzone = document.getElementById("nomecanzone");
+    const mobileFoto = document.getElementById("mobileFotoPlayer");
+    const mobileTitle = document.getElementById("mobileTitle");
+    footerImg.setAttribute("src", currentSong.cover);
+    console.log(footerImg);
+    nomeCanzone.innerHTML = `${currentSong.title}`;
+    nomeCantante.innerHTML = `${currentSong.artist}`;
+
+    player.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+  }
+  if (songsAscoltate) {
+    for (let i = 0; i < songsAscoltate.length; i++) {
+      const newLi = document.createElement("li");
+      newLi.innerText = songsAscoltate[i];
+      menu.appendChild(newLi);
+    }
+  }
+};
+playerFunction();
