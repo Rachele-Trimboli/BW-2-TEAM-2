@@ -43,7 +43,7 @@ const createTracks = (canzoni) => {
       player.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
       player2.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
       const newLi = document.createElement("li");
-      newLi.innerText = `${track.title}`;
+      newLi.innerText = `${canzone.title}`;
       newLi.classList.add("nav-item");
       menu.appendChild(newLi);
       const newSong = {
