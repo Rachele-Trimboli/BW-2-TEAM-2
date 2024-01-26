@@ -36,12 +36,14 @@ const viewApiFunction = function () {
                       alt="copertina"
 
                     />
-                    <div class="card-body h-100 bg-dark p-1 d-flex flex-column justify-content-between align-items-start">
+                    <div class="card-body h-100 bg-dark p-1 d-flex flex-column justify-content-evenly align-items-center">
                     <p class="card-text fw-semibold text-white">
                       ${album.title}
                     </p>
                     <p class="artist">${data.data[i].artist.name}</p>
+                    <div class="w-100 d-flex justify-content-center">
                     <button type="button" class="btn btn-spotifygreen rounded-circle text-black play"><i class="bi bi-play-circle-fill bg-spotifygreen"></i></button>
+                    </div>
                     </div>
         `;
         const button = document.getElementsByClassName("play");
