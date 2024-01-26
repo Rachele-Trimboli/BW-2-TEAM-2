@@ -3,7 +3,10 @@ console.log(card);
 const addressBarContent = new URLSearchParams(location.search);
 const searchAlbumId = addressBarContent.get("albumId");
 const searchIcon = document.getElementById("cerca");
-
+const canzoniAscoltate = localStorage.getItem("canzoniAscoltate")
+  ? JSON.parse(localStorage.getItem("canzoniAscoltate"))
+  : [];
+const menu = document.getElementById("menu");
 const viewApiFunction = function () {
   fetch("  https://striveschool-api.herokuapp.com/api/deezer/search?q=pop", {
     headers: {
@@ -61,6 +64,7 @@ viewApiFunction();
 
 const playerFunction = function () {
   const currentSong = JSON.parse(localStorage.getItem("canzoneInAtto"));
+  const songsAscoltate = JSON.parse(localStorage.getItem("canzoniAscoltate"));
   console.log(currentSong);
   if (currentSong) {
     const player = document.getElementById("player");
@@ -79,6 +83,13 @@ const playerFunction = function () {
 
     player.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     player2.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+  }
+  if (songsAscoltate) {
+    for (let i = 0; i < songsAscoltate.length; i++) {
+      const newLi = document.createElement("li");
+      newLi.innerText = songsAscoltate[i];
+      menu.appendChild(newLi);
+    }
   }
 };
 playerFunction();

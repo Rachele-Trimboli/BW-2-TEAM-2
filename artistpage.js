@@ -2,6 +2,10 @@ const artistId = new URLSearchParams(window.location.search).get("artistId");
 const cantante = document.getElementById("cantante");
 const ascoltatori = document.getElementById("ascoltatori");
 const sfondo = document.getElementById("sfondo");
+const menu = document.getElementById("menu");
+const canzoniAscoltate = localStorage.getItem("canzoniAscoltate")
+  ? JSON.parse(localStorage.getItem("canzoniAscoltate"))
+  : [];
 
 const secondsToMinutes = (time) => {
   let hours = 0;
@@ -77,6 +81,7 @@ const createTracks = (tracks) => {
     const mobileFoto = document.getElementById("mobileFotoPlayer");
     const mobileTitle = document.getElementById("mobileTitle");
     const player2 = document.getElementById("player2");
+
     col.addEventListener("click", function () {
       imgFooter.setAttribute("src", track.album.cover);
       nomeCantante.innerHTML = `${track.artist.name}`;
@@ -86,6 +91,12 @@ const createTracks = (tracks) => {
       const player = document.getElementById("player");
       player.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"></audio>`;
       player2.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+      const newLi = document.createElement("li");
+      newLi.innerText = `${track.title}`;
+      newLi.classList.add("nav-item");
+      menu.appendChild(newLi);
+      canzoniAscoltate.push(newLi.innerText);
+      console.log(canzoniAscoltate);
       const newSong = {
         title: track.title,
         artist: track.artist.name,
@@ -93,6 +104,10 @@ const createTracks = (tracks) => {
         player: track.preview,
       };
       localStorage.setItem("canzoneInAtto", JSON.stringify(newSong));
+      localStorage.setItem(
+        "canzoniAscoltate",
+        JSON.stringify(canzoniAscoltate)
+      );
     });
   });
 };
@@ -139,6 +154,8 @@ const getArtists = (artistId) => {
 getArtists(artistId);
 const playerFunction = function () {
   const currentSong = JSON.parse(localStorage.getItem("canzoneInAtto"));
+  const songsAscoltate = JSON.parse(localStorage.getItem("canzoniAscoltate"));
+
   console.log(currentSong);
   if (currentSong) {
     const player = document.getElementById("player");
@@ -157,6 +174,13 @@ const playerFunction = function () {
 
     player.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     player2.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+  }
+  if (songsAscoltate) {
+    for (let i = 0; i < songsAscoltate.length; i++) {
+      const newLi = document.createElement("li");
+      newLi.innerText = songsAscoltate[i];
+      menu.appendChild(newLi);
+    }
   }
 };
 playerFunction();

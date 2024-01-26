@@ -5,6 +5,9 @@ const bandName = document.getElementById("bandName");
 const albumYear = document.getElementById("bandAnno");
 const albumlength = document.getElementById("numeroBrani");
 const albumDuration = document.getElementById("durataAlbum");
+const canzoniAscoltate = localStorage.getItem("canzoniAscoltate")
+  ? JSON.parse(localStorage.getItem("canzoniAscoltate"))
+  : [];
 const albumId = new URLSearchParams(window.location.search).get("albumId");
 const createTracks = (canzoni) => {
   canzoni.tracks.data.forEach((canzone, i) => {
@@ -39,6 +42,10 @@ const createTracks = (canzoni) => {
       const player2 = document.getElementById("player2");
       player.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
       player2.innerHTML = `<audio controls> <source src="${canzone.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+      const newLi = document.createElement("li");
+      newLi.innerText = `${track.title}`;
+      newLi.classList.add("nav-item");
+      menu.appendChild(newLi);
       const newSong = {
         title: canzone.title,
         artist: canzone.artist.name,
@@ -46,6 +53,10 @@ const createTracks = (canzoni) => {
         player: canzone.preview,
       };
       localStorage.setItem("canzoneInAtto", JSON.stringify(newSong));
+      localStorage.setItem(
+        "canzoniAscoltate",
+        JSON.stringify(canzoniAscoltate)
+      );
     });
   });
 };
@@ -128,6 +139,7 @@ getAlbum(albumId);
 
 const playerFunction = function () {
   const currentSong = JSON.parse(localStorage.getItem("canzoneInAtto"));
+  const songsAscoltate = JSON.parse(localStorage.getItem("canzoniAscoltate"));
   console.log(currentSong);
   if (currentSong) {
     const player = document.getElementById("player");
@@ -146,6 +158,13 @@ const playerFunction = function () {
 
     player.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
     player2.innerHTML = `<audio controls> <source src="${currentSong.player}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
+  }
+  if (songsAscoltate) {
+    for (let i = 0; i < songsAscoltate.length; i++) {
+      const newLi = document.createElement("li");
+      newLi.innerText = songsAscoltate[i];
+      menu.appendChild(newLi);
+    }
   }
 };
 playerFunction();
