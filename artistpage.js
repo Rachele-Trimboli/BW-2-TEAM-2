@@ -74,12 +74,18 @@ const createTracks = (tracks) => {
     const imgFooter = document.getElementById("fotocanzone");
     const nomeCantante = document.getElementById("nomecantante");
     const nomeCanzone = document.getElementById("nomecanzone");
+    const mobileFoto = document.getElementById("mobileFotoPlayer");
+    const mobileTitle = document.getElementById("mobileTitle");
+    const player2 = document.getElementById("player2");
     col.addEventListener("click", function () {
       imgFooter.setAttribute("src", track.album.cover);
       nomeCantante.innerHTML = `${track.artist.name}`;
       nomeCanzone.innerHTML = `${track.title}`;
+      mobileTitle.innerHTML = `${track.title}`;
+      mobileFoto.setAttribute("src", track.album.cover);
       const player = document.getElementById("player");
       player.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"></audio>`;
+      player2.innerHTML = `<audio controls> <source src="${track.preview}" type="audio/mp3" class="bg-dark text-white"> </audio>`;
       const newSong = {
         title: track.title,
         artist: track.artist.name,
